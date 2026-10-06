@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Naija Life - Style Guide Preview</title>
+<style>
+  :root{
+    --p500:#1FA55B;--p600:#168A4B;--p100:#C6ECD5;--a500:#F57A1F;--ink:#141A22;--ink5:#5B6675;
+    --cream:#F8F4EA;--card:#fff;--info:#2E7FD8;--danger:#E23B52;--warn:#E9A400;
+    --hunger:#F59E3F;--energy:#3B82F6;--fun:#EAB308;--social:#EC4899;--hygiene:#14B8A6;
+  }
+  *{box-sizing:border-box;margin:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--cream);color:var(--ink);padding:16px}
+  .wrap{max-width:480px;margin:0 auto;display:grid;gap:20px}
+  h1{font-size:26px} h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink5);margin-bottom:10px}
+  .card{background:var(--card);border-radius:20px;padding:16px;box-shadow:0 2px 8px rgba(20,26,34,.08)}
+  .swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .sw{height:56px;border-radius:12px;display:flex;align-items:end;padding:6px;font-size:11px;color:#fff}
+  .btns{display:flex;gap:8px;flex-wrap:wrap}
+  button{min-height:44px;padding:0 20px;border-radius:999px;border:0;font-weight:700;font-size:15px;cursor:pointer}
+  .primary{background:var(--p500);color:#fff} .accent{background:var(--a500);color:#fff}
+  .ghost{background:transparent;border:2px solid var(--p500);color:var(--p600)} .danger{background:var(--danger);color:#fff}
+  .bar{height:10px;border-radius:99px;background:#eee;overflow:hidden;margin:4px 0 12px}
+  .bar i{display:block;height:100%;border-radius:99px}
+  .row{display:flex;justify-content:space-between;font-size:14px;font-weight:600}
+  .phone{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;text-align:center;font-size:12px}
+  .app{display:grid;gap:4px;justify-items:center}
+  .ico{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;font-size:26px;color:#fff;background:var(--p500)}
+  .chip{display:inline-block;padding:4px 10px;border-radius:99px;background:var(--p100);color:var(--p600);font-size:12px;font-weight:700}
+  .receipt{border:2px dashed #d8d2c0;border-radius:16px;padding:12px;font-family:ui-monospace,monospace;font-size:13px}
+  .bubble{max-width:80%;padding:8px 12px;border-radius:16px;font-size:14px;margin:4px 0}
+  .me{background:var(--info);color:#fff;margin-left:auto;border-bottom-right-radius:4px}
+  .them{background:#eee;border-bottom-left-radius:4px}
+  nav{display:flex;justify-content:space-around;background:var(--card);border-radius:999px;padding:8px;box-shadow:0 2px 8px rgba(20,26,34,.12)}
+  nav span{font-size:12px;color:var(--ink5);padding:6px 10px;border-radius:999px}
+  nav .on{background:var(--ink);color:#fff}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Naija Life <span class="chip">style guide v0.1</span></h1>
+  <p style="color:var(--ink5)">Placeholder brand. Tokens: <code>design-tokens.json</code>. Original design, not a clone of any other game.</p>
+
+  <section class="card"><h2>Colors</h2>
+    <div class="swatches">
+      <div class="sw" style="background:#1FA55B">primary</div><div class="sw" style="background:#F57A1F">accent</div>
+      <div class="sw" style="background:#141A22">ink</div><div class="sw" style="background:#2E7FD8">info</div>
+      <div class="sw" style="background:#E23B52">danger</div><div class="sw" style="background:#E9A400">warning</div>
+      <div class="sw" style="background:#C6ECD5;color:#106B3B">primary-100</div><div class="sw" style="background:#F8F4EA;color:#141A22;border:1px solid #ddd">cream</div>
+    </div></section>
+
+  <section class="card"><h2>Buttons (min 44px)</h2>
+    <div class="btns"><button class="primary">Work now</button><button class="accent">Send money</button><button class="ghost">Cancel</button><button class="danger">Report</button></div></section>
+
+  <section class="card"><h2>Needs bars</h2>
+    <div class="row"><span>Hunger</span><span>90%</span></div><div class="bar"><i style="width:90%;background:var(--hunger)"></i></div>
+    <div class="row"><span>Energy</span><span>78%</span></div><div class="bar"><i style="width:78%;background:var(--energy)"></i></div>
+    <div class="row"><span>Fun</span><span>83%</span></div><div class="bar"><i style="width:83%;background:var(--fun)"></i></div>
+    <div class="row"><span>Social</span><span>60%</span></div><div class="bar"><i style="width:60%;background:var(--social)"></i></div>
+    <div class="row"><span>Hygiene</span><span>78%</span></div><div class="bar"><i style="width:78%;background:var(--hygiene)"></i></div></section>
+
+  <section class="card"><h2>Phone app grid</h2>
+    <div class="phone">
+      <div class="app"><div class="ico" style="background:#1FA55B">$</div>Bank</div>
+      <div class="app"><div class="ico" style="background:#F57A1F">J</div>Jobs</div>
+      <div class="app"><div class="ico" style="background:#2E7FD8">M</div>Messages</div>
+      <div class="app"><div class="ico" style="background:#EC4899">C</div>Contacts</div>
+      <div class="app"><div class="ico" style="background:#14B8A6">H</div>Home</div>
+      <div class="app"><div class="ico" style="background:#E9A400">G</div>Hustle</div>
+      <div class="app"><div class="ico" style="background:#7C5CFF">I</div>Items</div>
+      <div class="app"><div class="ico" style="background:#141A22">S</div>Settings</div>
+    </div></section>
+
+  <section class="card"><h2>Chat</h2>
+    <div class="bubble them">Wetin dey happen?</div><div class="bubble me">Just finished my shift. You free?</div></section>
+
+  <section class="card"><h2>Receipt</h2>
+    <div class="receipt">TRANSFER  #NL-8H2K-91QX<br>To: @friend_01<br>Amount: N50,000<br>Fee: N0<br>Status: Delivered</div></section>
+
+  <nav><span class="on">Home</span><span>Map</span><span>Market</span><span>Phone</span><span>Me</span></nav>
+</div>
+</body>
+</html>
